@@ -1,4 +1,5 @@
 import Image from "next/image";
+import useStore from "../../store/mainStore";
 import Btn from "../dls/Btn";
 import styles from "./Navbar.module.scss";
 
@@ -28,25 +29,9 @@ const ServerSvg = () => (
   </svg>
 );
 
-const MenuSvg = () => (
-  <svg
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="currentColor"
-    className={styles.menuSvg}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3.75 
-      5.25h16.5m-16.5 4.5h16.5m-16.5
-      4.5h16.5m-16.5 4.5h16.5"
-    />
-  </svg>
-);
-
 const Navbar = () => {
+  const { sidebar, setSidebar } = useStore();
+  console.log(sidebar);
   return (
     <div className={styles.main}>
       <div className={styles.logo}>
@@ -67,7 +52,23 @@ const Navbar = () => {
         </div>
       </div>
 
-      <MenuSvg />
+      {/* === MENU ICON FOR SIDEBAR */}
+      <svg
+        onClick={setSidebar}
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className={styles.menuSvg}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3.75 
+      5.25h16.5m-16.5 4.5h16.5m-16.5
+      4.5h16.5m-16.5 4.5h16.5"
+        />
+      </svg>
     </div>
   );
 };

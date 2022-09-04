@@ -13,7 +13,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero />
+      <section id="main">
+        <Hero />
+      </section>
     </div>
   );
 };
