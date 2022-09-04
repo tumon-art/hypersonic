@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Btn from "./dls/Btn";
 import styles from "./Navbar.module.scss";
 
 const Img = () => (
@@ -38,10 +39,10 @@ const Navbar = () => {
       </div>
 
       <div className={styles.nav}>
-        <div className={styles.btn}>About</div>
-        <div className={styles.btn}>Home</div>
-        <div className={styles.btn}>Contact</div>
-        <div className={styles.btn}>Pricing</div>
+        <Btn>About</Btn>
+        <Btn>Home</Btn>
+        <Btn>Contact</Btn>
+        <Btn>Pricing</Btn>
 
         <div className={styles.server}>
           <ServerSvg />
