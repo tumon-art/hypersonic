@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Btn from "../header/dls/Btn";
+import Btn from "../dls/Btn";
 import styles from "./Hero.module.scss";
 const Hero = () => {
   return (

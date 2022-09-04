@@ -1,3 +1,4 @@
+@use "../../styles/screen";
 .btn {
   border: 2px var(--dim) solid;
   color: white;
@@ -32,6 +33,7 @@
   }
 
   &:hover {
+    box-shadow: 0px 0px 60px 20px #462418;
     &:before {
       height: 121px;
       transform: rotate(0deg) translateY(0px);
@@ -40,7 +42,7 @@
 }
 
 .btnHero {
-  margin: 5rem 0;
+  margin: 2rem 0rem;
   border: 2px var(--dim) solid;
   color: white;
   cursor: pointer;
@@ -59,7 +61,11 @@
   transition-delay: 0.2s;
   position: relative;
   isolation: isolate;
+  box-shadow: 0px 0px 60px 0px #462418;
 
+  @include screen.devices(lg) {
+    margin: 5rem 0;
+  }
   &:before {
     position: absolute;
     content: "";
@@ -68,14 +74,14 @@
     background-color: var(--dim);
     width: 200px;
     height: 0px;
-    transform: rotate(70deg) translateY(100px);
+    transform: rotate(70deg) translateY(120px);
     left: 0;
     bottom: 0;
   }
 
   &:hover {
     &:before {
-      height: 121px;
+      height: 131px;
       transform: rotate(0deg) translateY(0px);
     }
   }

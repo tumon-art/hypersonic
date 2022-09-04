@@ -6,8 +6,11 @@
   align-items: center;
   justify-content: space-between;
 
-  @include screen.devices(lg) {
+  @include screen.devices(md) {
     flex-direction: row;
+    margin: 4em 0;
+  }
+  @include screen.devices(lg) {
     margin: 2em 0;
   }
 }
@@ -20,6 +23,11 @@
     font-weight: bolder;
     margin: 0;
     line-height: 3rem;
+
+    @include screen.devices(md) {
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
 
     @include screen.devices(lg) {
       font-size: 3rem;
@@ -58,7 +66,14 @@
     height: 300px;
     width: 300px;
     filter: blur(322px);
-    background-color: rgb(131, 79, 1);
+    background-color: var(--shadow);
+  }
+
+  @include screen.devices(md) {
+    height: 310px;
+    width: 310px;
+    order: 1;
+    margin: 0 2em 0 0;
   }
 
   @include screen.devices(lg) {

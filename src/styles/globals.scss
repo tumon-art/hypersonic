@@ -5,6 +5,7 @@
   --coral: #dab989;
   --coral-light: #f7ede0;
   --dim: #753304;
+  --shadow: #aa3304;
   --transition: 0.4s;
 }
 
@@ -12,6 +13,10 @@ body {
   padding: 2px 5px 0 5px;
   margin: 0;
   background: #150a00;
+
+  @include screen.devices(md) {
+    padding: 0 30px;
+  }
 
   @include screen.devices(lg) {
     padding: 0 50px;
