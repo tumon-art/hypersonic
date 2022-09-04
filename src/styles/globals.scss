@@ -1,7 +1,19 @@
+@use "./screen";
+
+:root {
+  --font: sans-serif;
+  --coral: #dab989;
+  --transition: 0.4s;
+}
 html,
 body {
   padding: 0;
   margin: 0;
+  background: #150a00;
+
+  @include screen.devices(lg) {
+    padding: 0 50px;
+  }
 }
 
 a {
