@@ -8,10 +8,10 @@ const Hero = () => {
         <h1>Hypersonic Internet</h1>
         <h1> Services Ltd.</h1>
         <p>
-          {`Best internet service provider in Bangladesh which 
-          provides fully dedicated, super fast, cost-effective,
-          secured internet connection. We are promised to meeting your 
-          needs and delivering industry-leading customer service.`}
+          {`Best internet service provider in Bangladesh which provides 
+          fully dedicated, super fast, cost-effective, secured internet
+          connection. We are promised to meeting your needs and
+          delivering industry-leading customer service.`}
         </p>
 
         <div>
@@ -23,8 +23,9 @@ const Hero = () => {
         <Image
           className={styles.img}
           src="/iot.png"
-          height="400px"
-          width="400px"
+          // height="400px"
+          // width="400px"
+          layout="fill"
           alt="img"
         />
       </div>
