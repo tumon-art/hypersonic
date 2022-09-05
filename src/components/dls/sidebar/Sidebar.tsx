@@ -3,10 +3,10 @@ import useStore from "../../../store/mainStore";
 import Btn from "../btn/Btn";
 
 const Sidebar = () => {
-  const { sidebar, setSidebar } = useStore();
+  const { sidebar, setSidebar, setSidebarFalse } = useStore();
   return (
     <div
-      onClick={() => sidebar && setSidebar()}
+      onClick={setSidebarFalse}
       className={`${sidebar ? styles.container : styles.container__hide}`}
     >
       <div
