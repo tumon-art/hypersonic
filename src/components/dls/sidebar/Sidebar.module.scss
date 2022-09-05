@@ -1,7 +1,21 @@
+@use "../../../styles/screen";
+
+.container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+
+  @include screen.devices(md) {
+    display: none;
+  }
+}
+
 .main {
   position: absolute;
   width: 100%;
   z-index: 1;
+  left: 0;
   // background: var(--dim);
   backdrop-filter: blur(43px);
   transition: var(--transition) transform;
@@ -10,21 +24,33 @@
     position: absolute;
     width: 100%;
     z-index: 1;
+    left: 0;
     transition: var(--transition) transform;
     transform: translateY(-420px);
   }
+
+  // &:before {
+  //   content: "✖";
+  //   color: white;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   position: absolute;
+  //   height: 30px;
+  //   width: 30px;
+  //   z-index: 3;
+  //   bottom: -15px;
+  //   right: 10px;
+  //   backdrop-filter: blur(90px);
+  //   border-radius: 50%;
+  //   border: 2px solid var(--dim);
+  // }
 }
 
 .nav {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   margin: 0.2em 0;
   flex-wrap: wrap;
-}
-
-.footer {
-  display: flex;
-  gap: 1rem;
-  margin: 0.3rem 0;
-  justify-content: center;
 }

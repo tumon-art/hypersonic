@@ -4,7 +4,6 @@ import Btn from "../dls/btn/Btn";
 import styles from "./Navbar.module.scss";
 import Sidebar from "../dls/sidebar/Sidebar";
 import MenuIcon from "../dls/icon/MenuIcon";
-import ServerSvg from "../dls/icon/ServerSvg";
 
 const Img = () => (
   <Image className={styles.img} src="/roc1.png" layout="fill" alt="img" />
@@ -25,14 +24,13 @@ const Navbar = () => {
         </div>
 
         <div className={styles.nav}>
-          <Btn>About</Btn>
-          <Btn>Home</Btn>
-          <Btn>Contact</Btn>
-          <Btn>Pricing</Btn>
+          <Btn nav>About</Btn>
+          <Btn nav>Home</Btn>
+          <Btn nav>Contact</Btn>
+          <Btn nav>Pricing</Btn>
+          <Btn nav>Servers</Btn>
 
-          <div className={styles.server}>
-            <ServerSvg />
-          </div>
+          <div className={styles.server}></div>
         </div>
 
         <MenuIcon />

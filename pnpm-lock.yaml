@@ -4,6 +4,7 @@ specifiers:
   '@types/node': 18.7.14
   '@types/react': 18.0.18
   '@types/react-dom': 18.0.6
+  classnames: ^2.3.1
   eslint: 8.23.0
   eslint-config-next: 12.2.5
   next: 12.2.5
@@ -14,6 +15,7 @@ specifiers:
   zustand: ^4.1.1
 
 dependencies:
+  classnames: 2.3.1
   next: 12.2.5_vuxjv6o7qhupugnkyf7vyqsruq
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -499,6 +501,10 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: false
+
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
     dev: false
 
   /color-convert/2.0.1:
