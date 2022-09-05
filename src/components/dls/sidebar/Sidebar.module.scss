@@ -5,7 +5,16 @@
   width: 100%;
   left: 0;
   height: 100%;
+  z-index: 1;
 
+  &__hide {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+    transition: var(--transition) transform;
+    transform: translateY(-220px);
+  }
   @include screen.devices(md) {
     display: none;
   }
@@ -26,7 +35,7 @@
     z-index: 1;
     left: 0;
     transition: var(--transition) transform;
-    transform: translateY(-420px);
+    transform: translateY(-220px);
   }
 
   // &:before {

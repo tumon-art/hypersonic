@@ -5,7 +5,10 @@ import Btn from "../btn/Btn";
 const Sidebar = () => {
   const { sidebar, setSidebar } = useStore();
   return (
-    <div onClick={() => sidebar && setSidebar} className={styles.container}>
+    <div
+      onClick={() => sidebar && setSidebar()}
+      className={`${sidebar ? styles.container : styles.container__hide}`}
+    >
       <div
         onClick={setSidebar}
         className={`${sidebar ? styles.main : styles.main__hide}`}
