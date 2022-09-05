@@ -66,29 +66,3 @@
   align-items: center;
   cursor: pointer;
 }
-.serverSvg {
-  color: var(--coral);
-  width: 30px;
-  height: 30px;
-  transition: var(--transition);
-
-  &:hover {
-    color: chocolate;
-  }
-}
-
-.menuSvg {
-  display: block;
-  color: var(--coral);
-  width: 30px;
-  height: 30px;
-  transition: var(--transition);
-
-  &:hover {
-    color: chocolate;
-  }
-
-  @include screen.devices(md) {
-    display: none;
-  }
-}

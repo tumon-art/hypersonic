@@ -1,0 +1,11 @@
+.main {
+  &__blur {
+    transition: var(--transition);
+    filter: blur(4px);
+  }
+
+  &__unblur {
+    transition: var(--transition);
+    filter: blur(0);
+  }
+}

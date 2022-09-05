@@ -1,0 +1,10 @@
+.serverSvg {
+  color: var(--coral);
+  width: 30px;
+  height: 30px;
+  transition: var(--transition);
+
+  &:hover {
+    color: chocolate;
+  }
+}

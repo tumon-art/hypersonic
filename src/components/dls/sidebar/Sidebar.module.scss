@@ -1,0 +1,30 @@
+.main {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  // background: var(--dim);
+  backdrop-filter: blur(43px);
+  transition: var(--transition) transform;
+
+  &__hide {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    transition: var(--transition) transform;
+    transform: translateY(-420px);
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  margin: 0.2em 0;
+  flex-wrap: wrap;
+}
+
+.footer {
+  display: flex;
+  gap: 1rem;
+  margin: 0.3rem 0;
+  justify-content: center;
+}
