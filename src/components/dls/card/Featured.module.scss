@@ -1,0 +1,41 @@
+.main {
+  border: 6px solid saddlebrown;
+  width: 300px;
+  height: 300px;
+  color: white;
+  border-radius: 5%;
+  position: relative;
+
+  h1 {
+    color: var(--coral);
+    font-family: var(--font);
+    margin: 0 1em;
+  }
+
+  p {
+    color: var(--coral);
+    margin: 2em 1em;
+    font-family: var(--font);
+  }
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    transition: var(--transition);
+    bottom: 0;
+    background-color: rgba(255, 0, 0, 0.116);
+    position: absolute;
+
+    &:hover {
+      height: 0%;
+      background-color: var(--dim);
+    }
+  }
+}
+
+.svg {
+  display: flex;
+  margin: 1em 0;
+  justify-content: center;
+}

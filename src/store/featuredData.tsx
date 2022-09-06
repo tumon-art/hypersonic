@@ -10,6 +10,10 @@ const data = [
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
+        style={{
+          width: "50px",
+          color: "var(--dim)",
+        }}
       >
         <path
           d="M19.5 21a3 3 0 003-3v-4.5a3 3 0 00-3-3h-15a3 3 0 00-3
@@ -30,6 +34,10 @@ const data = [
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
+        style={{
+          width: "50px",
+          color: "var(--dim)",
+        }}
       >
         <path
           d="M5.507 4.048A3 3 0 017.785 3h8.43a3 3 0 012.278 
@@ -58,6 +66,10 @@ const data = [
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
+        style={{
+          width: "50px",
+          color: "var(--dim)",
+        }}
       >
         <path
           fillRule="evenodd"
@@ -85,6 +97,10 @@ const data = [
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
+        style={{
+          width: "50px",
+          color: "var(--dim)",
+        }}
       >
         <path
           fillRule="evenodd"
