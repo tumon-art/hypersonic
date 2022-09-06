@@ -12,8 +12,6 @@
     width: 100%;
     z-index: 2;
     left: 0;
-    transition: var(--transition) transform;
-    transform: translateY(-220px);
   }
   @include screen.devices(md) {
     display: none;
@@ -25,35 +23,17 @@
   width: 100%;
   z-index: 1;
   left: 0;
-  // background: var(--dim);
-  backdrop-filter: blur(43px);
-  transition: var(--transition) transform;
+  backdrop-filter: blur(8px);
+  transition: var(--transition) translate;
 
   &__hide {
     position: absolute;
     width: 100%;
     z-index: 1;
     left: 0;
-    transition: var(--transition) transform;
-    transform: translateY(-220px);
+    transition: var(--transition) translate;
+    translate: 0px -100px;
   }
-
-  // &:before {
-  //   content: "✖";
-  //   color: white;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   position: absolute;
-  //   height: 30px;
-  //   width: 30px;
-  //   z-index: 3;
-  //   bottom: -15px;
-  //   right: 10px;
-  //   backdrop-filter: blur(90px);
-  //   border-radius: 50%;
-  //   border: 2px solid var(--dim);
-  // }
 }
 
 .nav {
