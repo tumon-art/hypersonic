@@ -9,10 +9,7 @@ const Sidebar = () => {
       onClick={setSidebarFalse}
       className={`${sidebar ? styles.container : styles.container__hide}`}
     >
-      <div
-        onClick={setSidebar}
-        className={`${sidebar ? styles.main : styles.main__hide}`}
-      >
+      <div className={`${sidebar ? styles.main : styles.main__hide}`}>
         <div className={styles.nav}>
           <Btn side>About</Btn>
           <Btn side>Home</Btn>
