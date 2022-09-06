@@ -1,6 +1,6 @@
 import { Card } from "./@types";
 
-export const data: Card[] = [
+const data = [
   {
     id: "1",
     title: "BDIX CONNECTIVITY",
@@ -106,3 +106,5 @@ export const data: Card[] = [
     ),
   },
 ];
+
+export default data;

@@ -5,6 +5,9 @@ import Navbar from "../components/header/Navbar";
 import Hero from "../components/hero/Hero";
 import useStore from "../store/mainStore";
 
+import featuredData from "../store/featuredData";
+import { Card } from "../store/@types";
+import Featured from "../components/dls/card/Featured";
 const Home: NextPage = () => {
   const { sidebar } = useStore();
   return (
@@ -22,7 +25,11 @@ const Home: NextPage = () => {
       </section>
 
       {/* ======= Featured Services Section =======  */}
-      <section></section>
+      <section>
+        {featuredData.map((card: Card) => {
+          return <Featured key={card.id} card={card} />;
+        })}
+      </section>
     </div>
   );
 };
