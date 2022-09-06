@@ -1,5 +1,8 @@
-export const data = [
+import { Card } from "./@types";
+
+export const data: Card[] = [
   {
+    id: "1",
     title: "BDIX CONNECTIVITY",
     desc: "Lag Free High Speed Row Bandwidth with No Ping Loss, High Speed Fiber Optic & Wireless 10G LAN Network.",
     svg: (
@@ -19,6 +22,7 @@ export const data = [
     ),
   },
   {
+    id: "2",
     title: "TORRENT SERVERS",
     desc: "27+ Seed Servers, 20+ Local Torrent Servers, Rare Collection of Movies, High Speed Download.",
     svg: (
@@ -46,6 +50,7 @@ export const data = [
     ),
   },
   {
+    id: "3",
     title: "100 TERABYTES FTP SERVER",
     desc: "BlueRay HD 1080p 3D English, Hindi, Kolkata Movies, Software, Music, TV Shows, Songs & so on",
     svg: (
@@ -72,6 +77,7 @@ export const data = [
     ),
   },
   {
+    id: "4",
     title: "WCALL CENTER & ONLINE SUPPORT",
     desc: "24X7 Call Center, 24X7 Online Support, Fastest Customer Service",
     svg: (

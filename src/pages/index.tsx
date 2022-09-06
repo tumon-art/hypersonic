@@ -20,6 +20,9 @@ const Home: NextPage = () => {
       <section id="main">
         <Hero />
       </section>
+
+      {/* ======= Featured Services Section =======  */}
+      <section></section>
     </div>
   );
 };
