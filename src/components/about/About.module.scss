@@ -1,0 +1,52 @@
+@use "../../styles/screen";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font);
+
+  h1 {
+    color: var(--coral);
+    word-wrap: normal;
+    text-align: center;
+    text-shadow: 1px 1px 402px rgb(255, 1, 1);
+
+    @include screen.devices(sm) {
+      font-size: 2rem;
+      padding: 0 2em;
+    }
+
+    @include screen.devices(md) {
+      font-size: 2.9rem;
+      padding: 0 1em;
+    }
+
+    @include screen.devices(lg) {
+      font-size: 3rem;
+      padding: 0 3em;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: var(--dim);
+    font-weight: bold;
+    text-shadow: 1px 1px 402px #a00;
+
+    @include screen.devices(sm) {
+      font-size: 1.2rem;
+      margin: 0 5em;
+    }
+
+    @include screen.devices(md) {
+      font-size: 1.7rem;
+      margin: 0 7em;
+    }
+
+    @include screen.devices(lg) {
+      font-size: 1.8rem;
+      margin: 0 8em;
+    }
+  }
+}

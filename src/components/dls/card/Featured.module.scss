@@ -8,6 +8,23 @@
   border-radius: 5%;
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    z-index: -1;
+    background-color: rgb(74, 9, 9);
+    left: -30px;
+    top: -30px;
+    filter: blur(140px);
+  }
+
+  @include screen.devices(lg) {
+    width: 260px;
+    height: 300px;
+  }
+
   h1 {
     color: var(--coral);
     font-family: var(--font);
@@ -17,6 +34,7 @@
   p {
     color: var(--coral);
     margin: 2em 1em;
+    font-size: 0.9em;
     font-family: var(--font);
   }
 

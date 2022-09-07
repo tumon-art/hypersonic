@@ -5,6 +5,8 @@ import Navbar from "../components/header/Navbar";
 import Hero from "../components/hero/Hero";
 import useStore from "../store/mainStore";
 import FeaturedCard from "../components/featured/FeaturedComp";
+import About from "../components/about/About";
+import Pricing from "../components/pricing/Pricing";
 
 const Home: NextPage = () => {
   const { sidebar } = useStore();
@@ -26,6 +28,12 @@ const Home: NextPage = () => {
       <section className={styles.featuredSect}>
         <FeaturedCard />
       </section>
+
+      {/* ======= About Section =======  */}
+      <About />
+
+      {/* ======= Pricing Section =======  */}
+      <Pricing />
     </div>
   );
 };
