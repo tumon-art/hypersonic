@@ -9,3 +9,9 @@
     filter: blur(0);
   }
 }
+
+.featuredSect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

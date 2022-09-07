@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* ======= Featured Services Section =======  */}
-      <section>
+      <section className={styles.featuredSect}>
         <FeaturedCard />
       </section>
     </div>

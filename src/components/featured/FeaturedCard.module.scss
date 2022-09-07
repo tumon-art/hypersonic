@@ -1,6 +1,22 @@
+@use "../../styles/screen";
 .main {
   margin: 3em 0;
   display: grid;
   gap: 4em 0;
   justify-content: center;
+
+  @include screen.devices(sm) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2em 0.3em;
+  }
+
+  @include screen.devices(md) {
+    gap: 4em 4em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include screen.devices(lg) {
+    gap: 4em 1em;
+    grid-auto-flow: column;
+  }
 }
