@@ -14,7 +14,7 @@ const Pricing = () => {
               {/* === Price */}
               <h1>
                 <span className={styles.h1Span1}>৳</span>
-                {each.price}
+                <span className={styles.price}> {each.price} </span>
                 <span> / month</span>
               </h1>
 
