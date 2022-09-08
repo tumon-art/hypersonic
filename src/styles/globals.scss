@@ -9,6 +9,10 @@
   --transition: 0.4s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 2px 5px 0 5px;
   margin: 0;

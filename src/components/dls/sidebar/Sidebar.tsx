@@ -11,10 +11,18 @@ const Sidebar = () => {
     >
       <div className={`${sidebar ? styles.main : styles.main__hide}`}>
         <div className={styles.nav}>
-          <Btn side>About</Btn>
-          <Btn side>Home</Btn>
-          <Btn side>Contact</Btn>
-          <Btn side>Pricing</Btn>
+          <Btn side href="#about">
+            About
+          </Btn>
+          <Btn side href="/">
+            Home
+          </Btn>
+          <Btn side href="#contact">
+            Contact
+          </Btn>
+          <Btn side href="#pricing">
+            Pricing
+          </Btn>
           <Btn side>Servers</Btn>
         </div>
       </div>

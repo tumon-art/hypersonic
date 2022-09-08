@@ -24,10 +24,18 @@ const Navbar = () => {
         </div>
 
         <div className={styles.nav}>
-          <Btn nav>About</Btn>
-          <Btn nav>Home</Btn>
-          <Btn nav>Contact</Btn>
-          <Btn nav>Pricing</Btn>
+          <Btn nav href="#about">
+            About
+          </Btn>
+          <Btn nav href="/">
+            Home
+          </Btn>
+          <Btn nav href="#contact">
+            Contact
+          </Btn>
+          <Btn nav href="#pricing">
+            Pricing
+          </Btn>
           <Btn nav>Servers</Btn>
 
           <div className={styles.server}></div>
