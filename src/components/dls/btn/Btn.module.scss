@@ -85,6 +85,10 @@
       transform: rotate(0deg) translateY(0px);
     }
   }
+  &__card {
+    @extend .btnHero;
+    margin: 2em 0;
+  }
 }
 
 .btnSidebar {

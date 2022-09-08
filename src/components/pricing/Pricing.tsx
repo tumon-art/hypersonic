@@ -5,6 +5,9 @@ import styles from "./Pricing.module.scss";
 const Pricing = () => {
   return (
     <section id="pricing" className={styles.main}>
+      <Btn nav> Pricing </Btn>
+      <h1>Most Popular Packages</h1>
+      <p className={styles.p}>Choose The Best Package That Suits You</p>
       <div className={styles.cardHold}>
         {pricingData.map<JSX.Element>((each) => {
           return (
@@ -27,7 +30,7 @@ const Pricing = () => {
               })}
 
               {/* <button>{each.btnText}</button> */}
-              <Btn hero> {each.btnText} </Btn>
+              <Btn card> {each.btnText} </Btn>
             </div>
           );
         })}

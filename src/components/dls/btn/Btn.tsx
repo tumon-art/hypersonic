@@ -6,13 +6,15 @@ interface props {
   hero?: boolean;
   children: any;
   side?: boolean;
+  card?: boolean;
 }
 
-const Btn = ({ hero, side, nav, children }: props) => {
+const Btn = ({ card, hero, side, nav, children }: props) => {
   const classes = classNames({
     [styles.btnNav]: nav,
     [styles.btnHero]: hero,
     [styles.btnSidebar]: side,
+    [styles.btnHero__card]: card,
   });
   return <div className={classes}> {children} </div>;
 };
