@@ -4,7 +4,7 @@ import classNames from "classnames";
 interface props {
   nav?: boolean;
   hero?: boolean;
-  children: string;
+  children: any;
   side?: boolean;
 }
 

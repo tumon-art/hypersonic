@@ -1,4 +1,5 @@
 import pricingData from "../../store/pricingData";
+import Btn from "../dls/btn/Btn";
 import styles from "./Pricing.module.scss";
 
 const Pricing = () => {
@@ -11,12 +12,21 @@ const Pricing = () => {
               <h3> {each.speed} </h3>
 
               {/* === Price */}
-              <div>
-                <h1>
-                  {each.price}
-                  <span> / month</span>
-                </h1>
-              </div>
+              <h1>
+                {each.price}
+                <span> / month</span>
+              </h1>
+
+              {each.features.map((e, i) => {
+                return (
+                  <div className={styles.features} key={i}>
+                    {e}
+                  </div>
+                );
+              })}
+
+              {/* <button>{each.btnText}</button> */}
+              <Btn hero> {each.btnText} </Btn>
             </div>
           );
         })}
