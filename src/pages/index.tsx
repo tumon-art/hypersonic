@@ -7,6 +7,7 @@ import useStore from "../store/mainStore";
 import FeaturedCard from "../components/featured/FeaturedComp";
 import About from "../components/about/About";
 import Pricing from "../components/pricing/Pricing";
+import Footer from "../components/footer/Footer";
 
 const Home: NextPage = () => {
   const { sidebar } = useStore();
@@ -34,6 +35,9 @@ const Home: NextPage = () => {
 
       {/* ======= Pricing Section =======  */}
       <Pricing />
+
+      {/* ======= Footer Section =======  */}
+      <Footer />
     </div>
   );
 };

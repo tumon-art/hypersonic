@@ -45,13 +45,13 @@
     }
 
     @include screen.devices(md) {
-      font-size: 1.7rem;
-      margin: 0 7em;
+      font-size: 1.3rem;
+      margin: 0 6em;
     }
 
     @include screen.devices(lg) {
-      font-size: 1.8rem;
-      margin: 0 8em;
+      font-size: 1.4rem;
+      margin: 0 15em;
     }
   }
 }

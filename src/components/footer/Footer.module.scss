@@ -1,0 +1,44 @@
+@use "../../styles/screen";
+
+.main {
+  font-family: var(--font);
+  color: var(--coral);
+}
+
+.footerHold {
+  justify-content: space-between;
+
+  @include screen.devices(md) {
+    display: flex;
+  }
+
+  .nameAndDesc {
+    p {
+      word-wrap: break-word;
+      width: 300px;
+      color: var(--dim);
+      font-size: 0.9rem;
+    }
+
+    .ImgAndText {
+      display: flex;
+
+      gap: 0 1em;
+
+      .imgHold {
+        position: relative;
+        height: 50px;
+        width: 100px;
+        .img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+.copyRight {
+  text-align: center;
+  margin: 0.2em 0;
+  font-size: 0.8rem;
+}

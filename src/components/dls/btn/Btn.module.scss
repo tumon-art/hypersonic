@@ -1,7 +1,7 @@
 @use "../../../styles/screen";
 .btnNav {
   border: 2px var(--dim) solid;
-  color: white;
+  color: var(--coral);
   cursor: pointer;
   font-family: var(--font);
   font-size: 0.8rem;
@@ -44,7 +44,7 @@
 .btnHero {
   margin: 2rem 0rem;
   border: 2px var(--dim) solid;
-  color: white;
+  color: var(--coral);
   cursor: pointer;
   font-family: var(--font);
   font-size: 0.8rem;
@@ -88,12 +88,15 @@
   &__card {
     @extend .btnHero;
     margin: 2em 0;
+    padding: 0.8rem 1rem;
+    height: 30px;
+    width: 140px;
   }
 }
 
 .btnSidebar {
   border: 2px var(--dim) solid;
-  color: white;
+  color: var(--coral);
   cursor: pointer;
   font-family: var(--font);
   font-size: 0.8rem;
