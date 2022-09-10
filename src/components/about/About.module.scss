@@ -5,7 +5,14 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--font);
+}
+.flexCont {
+  @include screen.devices(md) {
+    display: flex;
+  }
+}
 
+.textHold {
   h1 {
     color: var(--coral);
     word-wrap: normal;
@@ -54,4 +61,12 @@
       margin: 0 15em;
     }
   }
+}
+
+.imgHold {
+  position: reletive;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  background: red;
 }

@@ -19,12 +19,15 @@ const Footer = () => {
             <h3> Hypersonic</h3>
           </div>
           <p>
-            {" "}
             Largest data & internet service provider in Bangladesh. We value
             your opinion and this why we want you to give us a call today.
           </p>
+          <h4> Follow us on </h4>
         </div>
+        {/* ==== CONTACT US  */}
         <div>Contact Us</div>
+
+        {/* ==== Partner */}
         <div>We are proud members of</div>
       </div>
 
