@@ -10,6 +10,7 @@
   @include screen.devices(md) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 2em 0 0 0;
   }
 }
 
@@ -67,6 +68,16 @@
   height: 300px;
   display: flex;
   justify-content: center;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    filter: blur(440px);
+    opacity: 58%;
+    z-index: -1;
+    background: var(--dim);
+  }
 }
 
 .imgHold {
@@ -76,6 +87,11 @@
   width: 70%;
   overflow: hidden;
   align-self: center;
+
+  @include screen.devices(md) {
+    height: 90%;
+    width: 90%;
+  }
   .img {
     object-fit: contain;
   }
