@@ -19,9 +19,14 @@ const About = () => {
         </div>
 
         {/* ===== IMAGE SECTION  */}
-        <div>
+        <div className={styles.imgCard}>
           <div className={styles.imgHold}>
-            <Image src="/iot.png" layout="fill" alt="img" />
+            <Image
+              src="/iot3.png"
+              className={styles.img}
+              layout="fill"
+              alt="img"
+            />
           </div>
         </div>
       </div>

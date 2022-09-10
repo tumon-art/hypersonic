@@ -8,7 +8,8 @@
 }
 .flexCont {
   @include screen.devices(md) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -16,22 +17,18 @@
   h1 {
     color: var(--coral);
     word-wrap: normal;
-    text-align: center;
     text-shadow: 1px 1px 402px rgb(255, 1, 1);
 
     @include screen.devices(sm) {
       font-size: 2rem;
-      padding: 0 2em;
     }
 
     @include screen.devices(md) {
-      font-size: 2.9rem;
-      padding: 0 1em;
+      font-size: 2rem;
     }
 
     @include screen.devices(lg) {
-      font-size: 3rem;
-      padding: 0 3em;
+      font-size: 2rem;
     }
 
     p {
@@ -41,32 +38,38 @@
   }
 
   p {
-    text-align: center;
     color: var(--dim);
     font-weight: bold;
     text-shadow: 1px 1px 402px #a00;
 
     @include screen.devices(sm) {
       font-size: 1.2rem;
-      margin: 0 5em;
+      padding: 0;
     }
 
     @include screen.devices(md) {
       font-size: 1.3rem;
-      margin: 0 6em;
+      padding: 0;
     }
 
     @include screen.devices(lg) {
-      font-size: 1.4rem;
-      margin: 0 15em;
+      font-size: 1rem;
+      padding: 0;
     }
   }
 }
 
+.imgCard {
+}
+
 .imgHold {
-  position: reletive;
-  height: 40px;
-  width: 40px;
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  background: red;
+
+  .img {
+    object-fit: contain;
+  }
 }
