@@ -7,6 +7,7 @@ import FeaturedCard from "../components/featured/FeaturedComp";
 import About from "../components/about/About";
 import Pricing from "../components/pricing/Pricing";
 import Footer from "../components/footer/Footer";
+import Partners from "../components/partners/Partners";
 
 const Home: NextPage = () => {
   return (
@@ -35,6 +36,9 @@ const Home: NextPage = () => {
         {/* ======= Pricing Section =======  */}
         <Pricing />
       </section>
+
+      {/* ======= Partner Section =======  */}
+      <Partners />
 
       {/* ======= Footer Section =======  */}
       <Footer />
