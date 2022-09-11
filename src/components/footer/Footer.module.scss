@@ -3,6 +3,14 @@
 .main {
   font-family: var(--font);
   color: var(--coral);
+
+  @include screen.devices(md) {
+    padding: 0 30px;
+  }
+
+  @include screen.devices(lg) {
+    padding: 0 50px;
+  }
 }
 
 .footerHold {

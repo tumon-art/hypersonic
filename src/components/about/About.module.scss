@@ -5,6 +5,10 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--font);
+
+  @include screen.devices(md) {
+    margin: 5em 0 0 0;
+  }
 }
 .flexCont {
   @include screen.devices(md) {
@@ -42,7 +46,7 @@
   p {
     text-align: center;
     color: var(--dim);
-    font-weight: bold;
+    // font-weight: bold;
     text-shadow: 1px 1px 402px #a00;
 
     @include screen.devices(sm) {
@@ -53,12 +57,11 @@
     @include screen.devices(md) {
       text-align: left;
       font-size: 1.3rem;
-      padding: 0;
     }
 
     @include screen.devices(lg) {
       font-size: 1rem;
-      padding: 0;
+      padding: 0 10em 0 0;
     }
   }
 }
@@ -68,6 +71,10 @@
   height: 300px;
   display: flex;
   justify-content: center;
+
+  @include screen.devices(md) {
+    justify-content: right;
+  }
   &::before {
     content: "";
     position: absolute;

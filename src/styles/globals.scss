@@ -1,5 +1,3 @@
-@use "./screen";
-
 :root {
   --font: sans-serif;
   --coral: #dab989;
@@ -14,17 +12,8 @@ html {
 }
 
 body {
-  padding: 2px 5px 0 5px;
   margin: 0;
   background: #150a00;
-
-  @include screen.devices(md) {
-    padding: 0 30px;
-  }
-
-  @include screen.devices(lg) {
-    padding: 0 50px;
-  }
 }
 
 a {

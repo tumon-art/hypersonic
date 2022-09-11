@@ -1,4 +1,6 @@
-.main {
+@use "./screen";
+
+.section {
   &__blur {
     transition: var(--transition);
     filter: blur(4px);
@@ -7,6 +9,16 @@
   &__unblur {
     transition: var(--transition);
     filter: blur(0);
+  }
+
+  padding: 2px 5px 0 5px;
+
+  @include screen.devices(md) {
+    padding: 0 30px;
+  }
+
+  @include screen.devices(lg) {
+    padding: 0 50px;
   }
 }
 

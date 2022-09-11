@@ -7,6 +7,10 @@
   margin: 0 0;
   font-family: var(--font);
 
+  @include screen.devices(md) {
+    margin: 5em 0 0 0;
+  }
+
   h1 {
     color: var(--coral);
     word-wrap: normal;
