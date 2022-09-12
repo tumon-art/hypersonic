@@ -1,8 +1,23 @@
 import Btn from "../dls/btn/Btn";
 import styles from "./About.module.scss";
 import Image from "next/image";
+import { useState } from "react";
 
+const ask = [
+  {
+    id: "1",
+    title: "Triangle Internet For Gamer’s",
+    text: "Uninterrupted and smooth online gaming is determined by your internet connection. We are based in Dhaka, Bangladesh and our company is one of the leading internet providers in the city. We are widely known for providing the best internet for gaming and now we make sure that our all user is enjoying the uninterrupted internet connection. Our company is among the top internet service provider with fiber optics infrastructure in Bangladesh and therefore if you are looking for the best broadband internet service providers for online gaming in Dhaka, look no further as we will be here to serve you.",
+  },
+  {
+    id: "2",
+    title: "Triangle Care For Customers",
+    text: "Perhaps one of the main benefits of investing in our services is that you are sure of top-notch internet connectivity. In particular, we have cutting technologies and protocols that easily make us the perfect solution for your needs. We provide a speed home internet with excellent customer support and reliable installation that experiences no downtime. Our internet services are not capped or controlled in any way. We provide unlimited high-speed internet service for your needs.",
+  },
+];
 const About = () => {
+  const [show, setShow] = useState("");
+
   return (
     <section id="about" className={styles.main}>
       <Btn nav> About </Btn>
@@ -29,6 +44,26 @@ const About = () => {
             />
           </div>
         </div>
+      </div>
+
+      {/* ===== ASK QUESTIONS SECTION  */}
+      <div className={styles.ask}>
+        {ask.map((e) => {
+          return (
+            <div key={e.id}>
+              <div className={styles.titleHold}>
+                <h4 onClick={() => setShow(e.id)}> {e.title} </h4>
+                <span
+                  onClick={() => (show == e.id ? setShow("") : setShow(e.id))}
+                >
+                  {show == e.id ? "-" : "+"}
+                </span>
+              </div>
+
+              {show == e.id && <p> {e.text}</p>}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

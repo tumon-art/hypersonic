@@ -108,3 +108,29 @@
     object-fit: contain;
   }
 }
+
+.ask {
+  width: 50%;
+  color: var(--coral);
+  align-self: baseline;
+
+  h4 {
+    cursor: pointer;
+  }
+
+  p {
+  }
+}
+
+.titleHold {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  background: var(--dim);
+
+  span {
+    text-align: center;
+    font-size: 3rem;
+    color: coral;
+  }
+}
