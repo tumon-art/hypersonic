@@ -1,3 +1,29 @@
+@use "../../styles/screen";
+
+.main {
+  @include screen.devices(md) {
+    padding: 0 10em;
+  }
+
+  h1 {
+    color: var(--coral);
+    word-wrap: normal;
+    text-align: center;
+    text-shadow: 1px 1px 402px rgb(255, 1, 1);
+
+    @include screen.devices(sm) {
+      font-size: 2rem;
+    }
+
+    @include screen.devices(md) {
+      font-size: 2.9rem;
+    }
+
+    @include screen.devices(lg) {
+      font-size: 3rem;
+    }
+  }
+}
 .imgHold {
   position: relative;
   height: 50px;
