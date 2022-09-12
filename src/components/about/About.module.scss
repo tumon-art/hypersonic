@@ -123,6 +123,7 @@
   }
 
   p {
+    will-change: height;
     animation: anime 0.1s linear;
     overflow: hidden;
 
