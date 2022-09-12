@@ -21,6 +21,25 @@ const About = () => {
   return (
     <section id="about" className={styles.main}>
       <Btn nav> About </Btn>
+      {/* ===== ASK QUESTIONS SECTION  */}
+      <div className={styles.ask}>
+        {ask.map((e) => {
+          return (
+            <div key={e.id}>
+              <div className={styles.titleHold}>
+                <h4 onClick={() => setShow(e.id)}> {e.title} </h4>
+                <span
+                  onClick={() => (show == e.id ? setShow("") : setShow(e.id))}
+                >
+                  {show == e.id ? "-" : "+"}
+                </span>
+              </div>
+
+              {show == e.id && <p> {e.text}</p>}
+            </div>
+          );
+        })}
+      </div>
       <div className={styles.flexCont}>
         <div className={styles.textHold}>
           <h1>
@@ -44,26 +63,6 @@ const About = () => {
             />
           </div>
         </div>
-      </div>
-
-      {/* ===== ASK QUESTIONS SECTION  */}
-      <div className={styles.ask}>
-        {ask.map((e) => {
-          return (
-            <div key={e.id}>
-              <div className={styles.titleHold}>
-                <h4 onClick={() => setShow(e.id)}> {e.title} </h4>
-                <span
-                  onClick={() => (show == e.id ? setShow("") : setShow(e.id))}
-                >
-                  {show == e.id ? "-" : "+"}
-                </span>
-              </div>
-
-              {show == e.id && <p> {e.text}</p>}
-            </div>
-          );
-        })}
       </div>
     </section>
   );
