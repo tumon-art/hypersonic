@@ -8,10 +8,9 @@
 
   @include screen.devices(md) {
     flex-direction: row;
-    margin: 4em 0;
+    margin: 7em 0;
   }
   @include screen.devices(lg) {
-    margin: 2em 0;
   }
 }
 

@@ -1,5 +1,7 @@
+@use "../../styles/screen";
+
 .section {
-  margin: 10em 0;
+  margin: 3em 0 5em 0;
   font-family: var(--font);
 
   h1 {
@@ -11,13 +13,18 @@
 
 .cardHold {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em 0;
+  @include screen.devices(sm) {
+    justify-content: space-between;
+  }
 }
 
 .card {
-  width: 400px;
-  border-bottom: 8px solid var(--dim);
-  border-top: 8px solid var(--dim);
+  width: 350px;
+  border-radius: 5%;
+  border: 8px solid var(--dim);
   transition: var(--transition);
   position: relative;
 
@@ -32,14 +39,19 @@
     top: -30px;
     filter: blur(140px);
   }
-  &:hover {
-    scale: 1.1;
-  }
 }
 
 .textHold {
   color: var(--coral);
   padding: 0 10px;
+
+  h3 {
+    cursor: pointer;
+
+    &:hover {
+      color: coral;
+    }
+  }
 
   p {
     inline-size: 100%;
@@ -47,8 +59,8 @@
 }
 .imgHold {
   position: relative;
-  height: 250px;
-  width: 400px;
+  height: 220px;
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
