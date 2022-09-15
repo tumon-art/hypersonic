@@ -11,7 +11,6 @@ const Img = () => (
 
 const Navbar = () => {
   const { sidebar, setSidebar } = useStore();
-  console.log(sidebar);
   return (
     <>
       <Sidebar />

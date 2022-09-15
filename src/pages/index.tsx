@@ -8,25 +8,33 @@ import About from "../components/about/About";
 import Pricing from "../components/pricing/Pricing";
 import Footer from "../components/footer/Footer";
 import Partners from "../components/partners/Partners";
-import { useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const Home: NextPage = () => {
-  const [visible, setVisible] = useState(false);
-
   const btnElement = useRef();
 
   const onBtnClick = () => {
-    btnElement.current;
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   // === WINDOW EVENT
-
-  (function () {
-    function handleScroll() {}
+  useEffect(() => {
+    function handleScroll() {
+      const scrolled = document.documentElement.scrollTop;
+      if (scrolled > 1200) {
+        btnElement.current.style.display = "block";
+      } else {
+        btnElement.current.style.display = "none";
+      }
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  })();
+  }, []);
+
   return (
     <div>
       <Head>
