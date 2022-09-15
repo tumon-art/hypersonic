@@ -1,0 +1,69 @@
+.section {
+  margin: 10em 0;
+  font-family: var(--font);
+
+  h1 {
+    color: var(--coral);
+    font-size: 2.9rem;
+    text-align: center;
+  }
+}
+
+.cardHold {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 400px;
+  border-bottom: 8px solid var(--dim);
+  border-top: 8px solid var(--dim);
+  transition: var(--transition);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    z-index: -1;
+    background-color: rgb(74, 9, 9);
+    left: -30px;
+    top: -30px;
+    filter: blur(140px);
+  }
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.textHold {
+  color: var(--coral);
+  padding: 0 10px;
+
+  p {
+    inline-size: 100%;
+  }
+}
+.imgHold {
+  position: relative;
+  height: 250px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: coral;
+    opacity: 26%;
+    top: 0;
+  }
+
+  .img {
+    object-fit: "cover";
+  }
+}

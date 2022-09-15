@@ -9,6 +9,7 @@ import Pricing from "../components/pricing/Pricing";
 import Footer from "../components/footer/Footer";
 import Partners from "../components/partners/Partners";
 import { useEffect, useRef } from "react";
+import OurBlog from "../components/ourBlog/OurBlog";
 
 const Home: NextPage = () => {
   const btnElement = useRef<HTMLButtonElement>(null);
@@ -60,6 +61,9 @@ const Home: NextPage = () => {
 
         {/* ======= Pricing Section =======  */}
         <Pricing />
+
+        {/* ======= Our Blog Section =======  */}
+        <OurBlog />
       </section>
 
       {/* ======= Partner Section =======  */}
