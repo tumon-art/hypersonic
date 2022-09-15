@@ -11,7 +11,7 @@ import Partners from "../components/partners/Partners";
 import { useEffect, useRef } from "react";
 
 const Home: NextPage = () => {
-  const btnElement = useRef();
+  const btnElement = useRef<HTMLButtonElement>(null);
 
   const onBtnClick = () => {
     window.scrollTo({
@@ -25,9 +25,9 @@ const Home: NextPage = () => {
     function handleScroll() {
       const scrolled = document.documentElement.scrollTop;
       if (scrolled > 1200) {
-        if (btnElement != undefined) btnElement.current.style.display = "block";
+        btnElement.current!.style.display = "block";
       } else {
-        if (btnElement != undefined) btnElement.current.style.display = "none";
+        btnElement.current!.style.display = "none";
       }
     }
 

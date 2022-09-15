@@ -6,7 +6,7 @@ import { alvarion, dlink, gp, huawei, teletalk, walton } from "../../../public";
 
 const arr = [alvarion, dlink, gp, huawei, teletalk, walton];
 
-const Partners = () => {
+const Partners = (al) => {
   const settings = {
     infinite: true,
     autoplay: true,
