@@ -25,9 +25,9 @@ const Home: NextPage = () => {
     function handleScroll() {
       const scrolled = document.documentElement.scrollTop;
       if (scrolled > 1200) {
-        btnElement.current.style.display = "block";
+        if (btnElement != undefined) btnElement.current.style.display = "block";
       } else {
-        btnElement.current.style.display = "none";
+        if (btnElement != undefined) btnElement.current.style.display = "none";
       }
     }
 
