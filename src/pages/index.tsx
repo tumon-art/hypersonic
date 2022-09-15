@@ -8,8 +8,25 @@ import About from "../components/about/About";
 import Pricing from "../components/pricing/Pricing";
 import Footer from "../components/footer/Footer";
 import Partners from "../components/partners/Partners";
+import { useRef, useState } from "react";
 
 const Home: NextPage = () => {
+  const [visible, setVisible] = useState(false);
+
+  const btnElement = useRef();
+
+  const onBtnClick = () => {
+    btnElement.current;
+  };
+
+  // === WINDOW EVENT
+
+  (function () {
+    function handleScroll() {}
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  })();
   return (
     <div>
       <Head>
@@ -42,6 +59,10 @@ const Home: NextPage = () => {
 
       {/* ======= Footer Section =======  */}
       <Footer />
+
+      <button onClick={onBtnClick} ref={btnElement} className={styles.top}>
+        ^
+      </button>
     </div>
   );
 };

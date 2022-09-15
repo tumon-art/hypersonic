@@ -1,6 +1,8 @@
 @use "./screen";
 
 .section {
+  position: relative;
+
   &__blur {
     transition: var(--transition);
     filter: blur(4px);
@@ -26,4 +28,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.top {
+  height: 36px;
+  width: 40px;
+  background: var(--dim);
+  border: none;
+  color: white;
+  position: sticky;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: 4px solid #571708;
+  font-weight: 900;
+  border-radius: 15px 9px;
+
+  &:hover {
+  }
 }
