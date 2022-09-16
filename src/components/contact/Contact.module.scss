@@ -1,0 +1,33 @@
+@use "../../styles/screen";
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font);
+}
+
+.mainH1 {
+  color: var(--coral);
+  font-size: 2.9rem;
+  text-align: center;
+
+  @include screen.devices(sm) {
+    font-size: 2rem;
+  }
+
+  @include screen.devices(md) {
+    font-size: 2.9rem;
+  }
+
+  @include screen.devices(lg) {
+    font-size: 3rem;
+  }
+}
+
+.mainP {
+  color: var(--coral);
+  inline-size: 543px;
+  text-align: center;
+}

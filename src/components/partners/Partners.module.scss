@@ -1,6 +1,7 @@
 @use "../../styles/screen";
 
 .main {
+  font-family: var(--font);
   @include screen.devices(md) {
     padding: 0 10em;
   }
