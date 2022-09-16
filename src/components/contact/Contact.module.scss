@@ -31,3 +31,20 @@
   inline-size: 543px;
   text-align: center;
 }
+
+.iconNh2 {
+  color: var(--coral);
+  display: grid;
+  justify-items: center;
+
+  svg {
+    border: dotted 2px var(--coral);
+    border-radius: 50%;
+    height: 60px;
+    padding-inline: 10px;
+    padding-block: 10px;
+  }
+
+  h2 {
+  }
+}
