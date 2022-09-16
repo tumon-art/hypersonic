@@ -32,11 +32,31 @@
   text-align: center;
 }
 
+.flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include screen.devices(md) {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
 .iconNh2 {
   color: var(--coral);
   display: grid;
+  min-width: 200px;
   justify-items: center;
 
+  &__first {
+    @extend .iconNh2;
+    flex-grow: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @include screen.devices(md) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
   svg {
     border: dotted 2px var(--coral);
     border-radius: 50%;
