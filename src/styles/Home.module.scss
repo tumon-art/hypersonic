@@ -33,6 +33,7 @@
 .top {
   height: 36px;
   width: 40px;
+  display: none;
   background: var(--dim);
   border: none;
   color: white;
@@ -44,6 +45,8 @@
   font-weight: 900;
   border-top-left-radius: 15px;
   transition: var(--transition);
+  border-right-style: none;
+  border-bottom-style: none;
 
   &:hover {
     scale: 1.2;

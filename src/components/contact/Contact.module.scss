@@ -6,12 +6,35 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--font);
+
+  h1 {
+    color: var(--coral);
+    word-wrap: normal;
+    text-align: center;
+    text-shadow: 1px 1px 402px rgb(255, 1, 1);
+
+    @include screen.devices(sm) {
+      font-size: 2rem;
+    }
+
+    @include screen.devices(md) {
+      font-size: 2.9rem;
+    }
+
+    @include screen.devices(lg) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
 }
 
 .mainH1 {
   color: var(--coral);
-  font-size: 2.9rem;
   text-align: center;
+  font-size: 1.4rem;
 
   @include screen.devices(sm) {
     font-size: 2rem;
@@ -28,20 +51,29 @@
 
 .mainP {
   color: var(--coral);
-  inline-size: 543px;
+  width: 100%;
   text-align: center;
+
+  @include screen.devices(sm) {
+    width: 50%;
+  }
 }
 
 .flex {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 1em 0;
   @include screen.devices(md) {
+    grid-gap: 2em;
     grid-template-columns: 2fr 1fr 1fr;
   }
 }
 
 .iconNh2 {
+  background: rgb(62, 21, 17);
+  padding: 25px 20px;
+
   color: var(--coral);
+  border-radius: 15px 15px;
   display: grid;
   min-width: 200px;
   justify-items: center;
@@ -49,22 +81,40 @@
   &__first {
     @extend .iconNh2;
     flex-grow: 0;
-    grid-column-start: 1;
-    grid-column-end: 3;
 
     @include screen.devices(md) {
       grid-column-start: 1;
       grid-column-end: 2;
+      padding: 30px 80px;
     }
   }
   svg {
     border: dotted 2px var(--coral);
     border-radius: 50%;
-    height: 60px;
+    height: 50px;
     padding-inline: 10px;
     padding-block: 10px;
   }
 
   h2 {
+    text-align: center;
+    color: var(--coral);
+    text-shadow: 1px 1px 402px rgb(255, 1, 1);
+    font-size: 0.8rem;
+
+    @include screen.devices(sm) {
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    @include screen.devices(md) {
+      text-align: left;
+      font-size: 1.3rem;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.8rem;
   }
 }

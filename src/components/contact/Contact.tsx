@@ -3,9 +3,9 @@ import styles from "./Contact.module.scss";
 
 const Contact = () => {
   return (
-    <section className={styles.section}>
+    <section id="contact" className={styles.section}>
       <Btn nav> Contact </Btn>
-      <h1 className={styles.mainH1}>Contact Us</h1>
+      <h1 className={styles.mainH1}> Talk to us </h1>
       <p className={styles.mainP}>
         Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
         adipisci expedita at voluptas atque vitae autem.
@@ -32,6 +32,7 @@ const Contact = () => {
             />
           </svg>
           <h2>Our Address</h2>
+          <p>Wakil Tower, Badda Link Road, Gulshan-1, Dhaka-1212 Bangladesh</p>
         </div>
         {/* === EMAIL & CALL */}
         <div className={styles.iconNh2}>
@@ -57,6 +58,7 @@ const Contact = () => {
           </svg>
 
           <h2>Mail Address</h2>
+          <p>info@hypersonic.com.bd</p>
         </div>
 
         {/* === CALL US  */}
@@ -89,6 +91,7 @@ const Contact = () => {
           </svg>
 
           <h2>Call Address</h2>
+          <p> +88-09666770444 </p>
         </div>
       </div>
     </section>
