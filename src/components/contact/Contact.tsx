@@ -1,5 +1,6 @@
 import Btn from "../dls/btn/Btn";
 import styles from "./Contact.module.scss";
+import Map from "./Map";
 
 const Contact = () => {
   return (
@@ -92,6 +93,27 @@ const Contact = () => {
 
           <h2>Call Address</h2>
           <p> +88-09666770444 </p>
+        </div>
+      </div>
+      <div className={styles.sec}>
+        <h1> map </h1>
+        <div className={styles.mapHold}></div>
+        <Map />
+        <div className={styles.formHold}>
+          <form className={styles.form}>
+            <div>
+              <input placeholder="Your Name" type="text" />
+              <input placeholder="Your Email" type="text" />
+            </div>
+            <input
+              placeholder="Subject"
+              className={styles.iSubject}
+              type="text"
+            />
+            <textarea placeholder="Message" className={styles.textA} />
+
+            <Btn card> Send Message </Btn>
+          </form>
         </div>
       </div>
     </section>

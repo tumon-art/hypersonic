@@ -19,7 +19,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/store/socialLinks.js"
+    "src/store/socialLinks.js",
+    "src/components/contact/Map.jsx"
   ],
   "exclude": ["node_modules"]
 }
