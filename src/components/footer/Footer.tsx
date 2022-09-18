@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { AddressSvg, EmailSvg, PhoneSvg } from "../contact/Contact";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
     <footer id="footer" className={styles.main}>
       <div className={styles.footerHold}>
-        <div className={styles.nameAndDesc}>
+        <section className={styles.nameAndDesc}>
           <div className={styles.ImgAndText}>
             <div className={styles.imgHold}>
               <Image
@@ -23,12 +24,29 @@ const Footer = () => {
             your opinion and this why we want you to give us a call today.
           </p>
           <h4> Follow us on </h4>
-        </div>
+        </section>
+
         {/* ==== CONTACT US  */}
-        <div>Contact Us</div>
+        <section className={styles.contSect}>
+          <h3> Contact Us </h3>
+          <div>
+            <AddressSvg />
+            <p>Wakil Tower, Badda Link Road</p>
+          </div>
+          <div>
+            <EmailSvg />
+            <p>info@hypersonic.com.bd</p>
+          </div>
+          <div>
+            <PhoneSvg />
+            <p> +88-09666770444 </p>
+          </div>
+        </section>
 
         {/* ==== Partner */}
-        <div>We are proud members of</div>
+        <section>
+          <h3>We are proud members of</h3>
+        </section>
       </div>
 
       <div className={styles.copyRight}>
