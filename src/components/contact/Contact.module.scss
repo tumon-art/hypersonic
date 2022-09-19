@@ -65,6 +65,7 @@
   @include screen.devices(md) {
     grid-gap: 2em;
     grid-template-columns: 2fr 1fr 1fr;
+    margin: 2em 0;
   }
 }
 
@@ -144,6 +145,10 @@
   align-items: center;
   gap: 1em;
   height: 100%;
+
+  @include screen.devices(md) {
+    gap: 2em;
+  }
 
   input {
     padding: 0.5em;

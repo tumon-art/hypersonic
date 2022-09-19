@@ -3,27 +3,20 @@
 .main {
   font-family: var(--font);
   color: var(--coral);
-
-  // @include screen.devices(md) {
-  //   padding: 0 30px;
-  // }
-
-  // @include screen.devices(lg) {
-  //   padding: 0 50px;
-  // }
 }
 
 .footerHold {
   justify-content: space-between;
   border-top: 1px solid #4a322f;
+  padding: 10px 15px;
 
   @include screen.devices(md) {
     display: flex;
-    padding: 0 30px;
+    padding: 15px 30px;
   }
 
   @include screen.devices(lg) {
-    padding: 40px 50px 0 50px;
+    padding: 20px 50px;
   }
 
   .nameAndDesc {
@@ -60,10 +53,17 @@
 }
 
 .contSect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h3 {
     text-align: center;
   }
-  div {
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+  li {
     display: flex;
     align-items: center;
     gap: 1em;
@@ -79,6 +79,36 @@
     svg {
       height: 20px;
       width: 20px;
+    }
+  }
+}
+
+.sectMemb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include screen.devices(lg) {
+    width: 33%;
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+
+    @include screen.devices(lg) {
+      width: 50%;
+      margin: 1em 0 0 0;
+    }
+
+    span {
+      font-size: 0.8rem;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
   }
 }

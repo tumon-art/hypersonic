@@ -29,23 +29,39 @@ const Footer = () => {
         {/* ==== CONTACT US  */}
         <section className={styles.contSect}>
           <h3> Contact Us </h3>
-          <div>
-            <AddressSvg />
-            <p>Wakil Tower, Badda Link Road</p>
-          </div>
-          <div>
-            <EmailSvg />
-            <p>info@hypersonic.com.bd</p>
-          </div>
-          <div>
-            <PhoneSvg />
-            <p> +88-09666770444 </p>
-          </div>
+          <ol>
+            <li>
+              <AddressSvg />
+              <p>Wakil Tower, Badda Link Road</p>
+            </li>
+            <li>
+              <EmailSvg />
+              <p>info@hypersonic.com.bd</p>
+            </li>
+            <li>
+              <PhoneSvg />
+              <p> +88-09666770444 </p>
+            </li>
+          </ol>
         </section>
 
         {/* ==== Partner */}
-        <section>
+        <section className={styles.sectMemb}>
           <h3>We are proud members of</h3>
+          <div>
+            <span>BTCL</span>
+            <span> DLink</span>
+            <span> TpLink</span>
+            <span>Netis</span>
+            <span> BDISP</span>
+            <span>GP</span>
+            <span>Robi</span>
+            <span>TeleTalk</span>
+            <span>Bd-Link</span>
+            <span>Toto-Link</span>
+            <span>KS-INTERNET</span>
+            <span>Sky-Net</span>
+          </div>
         </section>
       </div>
 

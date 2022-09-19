@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./OurBlog.module.scss";
-
 const data = [
   {
     id: "1",
