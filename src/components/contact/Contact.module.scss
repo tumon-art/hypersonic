@@ -128,9 +128,7 @@
   @include screen.devices(md) {
     grid-template-columns: 1fr 1fr;
     gap: 0 2em;
-  }
-
-  .mapHold {
+    margin: 3em 0;
   }
 
   .formHold {

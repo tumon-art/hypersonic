@@ -29,14 +29,14 @@
     }
 
     @include screen.devices(lg) {
-      font-size: 3rem;
+      font-size: 4rem;
       line-height: 6rem;
     }
   }
 
   p {
     color: var(--coral);
-    font-family: sans-serif;
+    font-family: var(--font-jakarta);
     white-space: pre-line;
     font-size: 0.8rem;
 

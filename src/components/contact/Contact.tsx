@@ -104,8 +104,6 @@ const Contact = () => {
         </div>
       </div>
       <div className={styles.sec}>
-        <h1> map </h1>
-        <div className={styles.mapHold}></div>
         <Map />
         <div className={styles.formHold}>
           <form className={styles.form}>
