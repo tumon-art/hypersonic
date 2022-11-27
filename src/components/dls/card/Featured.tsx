@@ -4,6 +4,8 @@ import styles from "./Featured.module.scss";
 const Featured = ({ card }: { card: Card }) => {
   return (
     <div className={styles.main}>
+      <div className={styles.topBox}></div>
+      <div className={styles.bottomBox}></div>
       <div className={styles.svg}> {card.svg} </div>
       <h1> {card.title} </h1>
       <p> {card.desc} </p>
