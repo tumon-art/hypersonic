@@ -6,6 +6,17 @@
   color: wheat;
 }
 
+.section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 0 2em;
+  backdrop-filter: blur(14px) brightness(40%);
+}
+
 .main {
   display: flex;
   padding: 5px 5px;
@@ -13,7 +24,7 @@
   justify-content: space-between;
 
   @include screen.devices(lg) {
-    padding: 10px 10px;
+    padding: 0px 10px;
   }
 }
 

@@ -10,9 +10,10 @@ const Img = () => (
 );
 
 const Navbar = () => {
-  const { sidebar, setSidebar } = useStore();
+  const setSidebar = useStore((state) => state.setSidebar);
+  const sidebar = useStore((state) => state.sidebar);
   return (
-    <>
+    <section className={styles.section}>
       <Sidebar />
       <div className={styles.main}>
         <div className={styles.logo}>
@@ -42,7 +43,7 @@ const Navbar = () => {
 
         <MenuIcon />
       </div>
-    </>
+    </section>
   );
 };
 export default Navbar;

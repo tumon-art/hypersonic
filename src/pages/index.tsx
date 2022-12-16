@@ -52,7 +52,7 @@ const Home: NextPage = () => {
           <Hero />
         </section>
 
-        {/* ======= Featured Services Section =======  */}
+        {/* ======= Featured Services Section ======= */}
         <section className={styles.featuredSect}>
           <FeaturedCard />
         </section>
