@@ -11,7 +11,6 @@ const FeaturedCard = () => {
     const ovserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         entry.target.classList.toggle(styles["active"], entry.isIntersecting);
-        console.log(entry.target.classList);
       });
     });
 

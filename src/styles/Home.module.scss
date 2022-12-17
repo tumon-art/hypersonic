@@ -2,6 +2,7 @@
 
 .section {
   position: relative;
+  overflow-x: hidden;
 
   &__blur {
     transition: var(--transition);

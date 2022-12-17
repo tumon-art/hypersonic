@@ -28,11 +28,12 @@
   border-radius: 5%;
   position: relative;
   inset: 1em;
+  transition: 1s;
   opacity: 0;
-  translate: 400px;
+  transform: translateX(100px);
 
   &.active {
-    translate: 0px;
+    transform: translateX(0px);
     opacity: 1;
   }
 
