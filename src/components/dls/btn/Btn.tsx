@@ -1,6 +1,7 @@
 import styles from "./Btn.module.scss";
 import classNames from "classnames";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 interface props {
   nav?: boolean;
@@ -12,6 +13,11 @@ interface props {
 }
 
 const Btn = ({ card, hero, side, nav, href = "", children }: props) => {
+  const divRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    console.log(divRef.current!.offsetTop);
+  });
   const classes = classNames({
     [styles.btnNav]: nav,
     [styles.btnHero]: hero,
@@ -20,7 +26,10 @@ const Btn = ({ card, hero, side, nav, href = "", children }: props) => {
   });
   return (
     <Link href={href}>
-      <div className={classes}> {children} </div>
+      <div ref={divRef} className={classes}>
+        {" "}
+        {children}{" "}
+      </div>
     </Link>
   );
 };

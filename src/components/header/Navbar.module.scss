@@ -11,10 +11,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 0 2em;
-  backdrop-filter: blur(14px) brightness(40%);
+
+  &.active {
+    backdrop-filter: blur(10px) brightness(40%);
+  }
 }
 
 .main {

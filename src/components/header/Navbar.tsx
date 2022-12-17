@@ -4,6 +4,7 @@ import Btn from "../dls/btn/Btn";
 import styles from "./Navbar.module.scss";
 import Sidebar from "../dls/sidebar/Sidebar";
 import MenuIcon from "../dls/icon/MenuIcon";
+import { useEffect, useRef } from "react";
 
 const Img = () => (
   <Image className={styles.img} src="/roc1.png" layout="fill" alt="img" />
@@ -12,15 +13,34 @@ const Img = () => (
 const Navbar = () => {
   const setSidebar = useStore((state) => state.setSidebar);
   const sidebar = useStore((state) => state.sidebar);
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const mainName = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        sectionRef.current!.classList.add(styles["active"]);
+        mainName.current!.style.display = "none";
+        console.log(sectionRef.current!.offsetTop);
+      } else {
+        sectionRef.current!.classList.remove(styles["active"]);
+        mainName.current!.style.display = "block";
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className={styles.section}>
+    <section ref={sectionRef} className={styles.section}>
       <Sidebar />
       <div className={styles.main}>
         <div className={styles.logo}>
           <div className={styles.imgHold}>
             <Img />
           </div>
-          <span> HyperSonic</span>
+          <span ref={mainName}> HyperSonic</span>
         </div>
 
         <div className={styles.nav}>
