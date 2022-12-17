@@ -18,6 +18,13 @@ const Navbar = () => {
   const mainName = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    // InterSection Ovserver
+    // const ovserver = new IntersectionObserver((entries) => {
+    //   console.log(entries);
+    // });
+    // ovserver.observe(mainName.current!);
+
+    // Handle Scroll Function
     const handleScroll = () => {
       if (window.scrollY > 50) {
         sectionRef.current!.classList.add(styles["active"]);
@@ -28,7 +35,11 @@ const Navbar = () => {
         mainName.current!.style.display = "block";
       }
     };
+
+    // ADD EVENT LISTERNER
     window.addEventListener("scroll", handleScroll);
+
+    // REMOVE EVENT LISTERNER
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -40,7 +51,10 @@ const Navbar = () => {
           <div className={styles.imgHold}>
             <Img />
           </div>
-          <span ref={mainName}> HyperSonic</span>
+          <span id="spaaan" ref={mainName}>
+            {" "}
+            HyperSonic
+          </span>
         </div>
 
         <div className={styles.nav}>
