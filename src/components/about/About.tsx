@@ -1,7 +1,7 @@
 import Btn from "../dls/btn/Btn";
 import styles from "./About.module.scss";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ask = [
   {
@@ -18,8 +18,23 @@ const ask = [
 const About = () => {
   const [show, setShow] = useState("");
 
+  const aboutRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // InterSection Ovserver
+    const ovserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry, "entry");
+
+        // if (entry.isIntersecting) ovserver.unobserve(entry.target);
+      });
+    });
+
+    ovserver.observe(aboutRef.current as Element);
+  }, []);
+
   return (
-    <section id="about" className={styles.main}>
+    <section ref={aboutRef} id="about" className={styles.main}>
       <Btn nav> About </Btn>
       {/* ===== ASK QUESTIONS SECTION  */}
       {/* <div className={styles.ask}> */}

@@ -18,12 +18,6 @@ const Navbar = () => {
   const mainName = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    // InterSection Ovserver
-    // const ovserver = new IntersectionObserver((entries) => {
-    //   console.log(entries);
-    // });
-    // ovserver.observe(mainName.current!);
-
     // Handle Scroll Function
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -52,7 +46,6 @@ const Navbar = () => {
             <Img />
           </div>
           <span id="spaaan" ref={mainName}>
-            {" "}
             HyperSonic
           </span>
         </div>

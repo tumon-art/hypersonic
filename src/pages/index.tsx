@@ -33,6 +33,7 @@ const Home: NextPage = () => {
       }
     }
 
+    // Add Event Listener
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
