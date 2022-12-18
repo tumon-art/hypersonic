@@ -23,7 +23,7 @@ const FeaturedCard = () => {
     <div ref={cardsRef} className={styles.main}>
       {featuredData.map((card: Card) => {
         return (
-          <div className={styles.card}>
+          <div key={card.id} className={styles.card}>
             <div className={styles.topBox}></div>
             <div className={styles.bottomBox}></div>
             <div className={styles.svg}> {card.svg} </div>
