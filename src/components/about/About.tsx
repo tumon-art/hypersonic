@@ -33,7 +33,7 @@ const About = ({
           console.log("show");
           btnElement.current!.style.display = "block";
         }
-        if (entry.boundingClientRect.top > 683) {
+        if (entry.boundingClientRect.top > 600) {
           console.log("hide");
           btnElement.current!.style.display = "none";
         }
