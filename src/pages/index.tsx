@@ -23,20 +23,19 @@ const Home: NextPage = () => {
   };
 
   // === WINDOW EVENT
-  useEffect(() => {
-    function handleScroll() {
-      const scrolled = document.documentElement.scrollTop;
-      if (scrolled > 1200) {
-        btnElement.current!.style.display = "block";
-      } else {
-        btnElement.current!.style.display = "none";
-      }
-    }
-
-    // Add Event Listener
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     const scrolled = document.documentElement.scrollTop;
+  //     if (scrolled > 1200) {
+  //       btnElement.current!.style.display = "block";
+  //     } else {
+  //       btnElement.current!.style.display = "none";
+  //     }
+  //   }
+  //   // Add Event Listener
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <div>
@@ -59,7 +58,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ======= About Section =======  */}
-        <About />
+        <About btnElement={btnElement} />
 
         {/* ======= Pricing Section =======  */}
         <Pricing />

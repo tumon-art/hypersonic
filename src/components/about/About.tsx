@@ -1,7 +1,7 @@
 import Btn from "../dls/btn/Btn";
 import styles from "./About.module.scss";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 
 const ask = [
   {
@@ -15,7 +15,11 @@ const ask = [
     text: "Perhaps one of the main benefits of investing in our services is that you are sure of top-notch internet connectivity. In particular, we have cutting technologies and protocols that easily make us the perfect solution for your needs. We provide a speed home internet with excellent customer support and reliable installation that experiences no downtime. Our internet services are not capped or controlled in any way. We provide unlimited high-speed internet service for your needs.",
   },
 ];
-const About = () => {
+const About = ({
+  btnElement,
+}: {
+  btnElement: RefObject<HTMLButtonElement>;
+}) => {
   const [show, setShow] = useState("");
 
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -24,7 +28,15 @@ const About = () => {
     // InterSection Ovserver
     const ovserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry, "entry");
+        console.log(entry.boundingClientRect.top, "entry");
+        if (entry.isIntersecting) {
+          console.log("show");
+          btnElement.current!.style.display = "block";
+        }
+        if (entry.boundingClientRect.top > 683) {
+          console.log("hide");
+          btnElement.current!.style.display = "none";
+        }
 
         // if (entry.isIntersecting) ovserver.unobserve(entry.target);
       });

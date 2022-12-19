@@ -23,7 +23,6 @@ const Navbar = () => {
       if (window.scrollY > 50) {
         sectionRef.current!.classList.add(styles["active"]);
         mainName.current!.style.display = "none";
-        console.log(sectionRef.current!.offsetTop);
       } else {
         sectionRef.current!.classList.remove(styles["active"]);
         mainName.current!.style.display = "block";
