@@ -29,7 +29,7 @@ const About = ({
     const ovserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         console.log(entry.boundingClientRect.top, "entry");
-        if (entry.isIntersecting) {
+        if (entry.boundingClientRect.top < 600) {
           console.log("show");
           btnElement.current!.style.display = "block";
         }
