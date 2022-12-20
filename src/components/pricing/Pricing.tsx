@@ -1,14 +1,26 @@
+import { useRef } from "react";
 import pricingData from "../../store/pricingData";
 import Btn from "../dls/btn/Btn";
+import { useInterSect } from "../useInterSect";
 import styles from "./Pricing.module.scss";
 
 const Pricing = () => {
+  const pricingRef = useRef<HTMLDivElement>(null);
+
+  useInterSect(
+    pricingRef,
+    (entry) => {
+      console.log(entry);
+      entry.target.classList.toggle(styles["active"], entry.isIntersecting);
+    },
+    true
+  );
   return (
     <section id="pricing" className={styles.main}>
       <Btn nav> Pricing </Btn>
       <h1>Most Popular Packages</h1>
       <p className={styles.p}>Choose The Best Package That Suits You</p>
-      <div className={styles.cardHold}>
+      <div ref={pricingRef} className={styles.cardHold}>
         {pricingData.map<JSX.Element>((each) => {
           return (
             <div className={styles.card} key={each.id}>

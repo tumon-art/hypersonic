@@ -2,7 +2,7 @@ import Btn from "../dls/btn/Btn";
 import styles from "./About.module.scss";
 import Image from "next/image";
 import React, { RefObject, useEffect, useRef, useState } from "react";
-import { UseInterSect } from "../UseInterSect";
+import { useInterSect } from "../useInterSect";
 
 const ask = [
   {
@@ -26,9 +26,7 @@ const About = ({
 
   const aboutRef = useRef<HTMLDivElement>(null);
 
-  const onScreen = UseInterSect(aboutRef, (entry) => {
-    console.log(entry);
-    console.log(entry.boundingClientRect.top, "entry");
+  useInterSect(aboutRef, (entry) => {
     if (entry.boundingClientRect.top < 600) {
       btnElement.current!.style.display = "block";
     }
@@ -36,7 +34,6 @@ const About = ({
       btnElement.current!.style.display = "none";
     }
   });
-  console.log(onScreen);
 
   return (
     <section ref={aboutRef} id="about" className={styles.main}>

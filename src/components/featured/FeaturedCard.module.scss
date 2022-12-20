@@ -40,11 +40,12 @@
   border-radius: 5%;
   position: relative;
   inset: 1em;
+  will-change: translate;
   opacity: 0;
-  transform: translateX(100px);
+  translate: 100px 0;
 
   &.active {
-    transform: translateX(0px);
+    translate: 0 0;
     opacity: 1;
   }
 
