@@ -8,7 +8,7 @@ import About from "../components/about/About";
 import Pricing from "../components/pricing/Pricing";
 import Footer from "../components/footer/Footer";
 import Partners from "../components/partners/Partners";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import OurBlog from "../components/ourBlog/OurBlog";
 import Contact from "../components/contact/Contact";
 
@@ -22,21 +22,6 @@ const Home: NextPage = () => {
     });
   };
 
-  // === WINDOW EVENT
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     const scrolled = document.documentElement.scrollTop;
-  //     if (scrolled > 1200) {
-  //       btnElement.current!.style.display = "block";
-  //     } else {
-  //       btnElement.current!.style.display = "none";
-  //     }
-  //   }
-  //   // Add Event Listener
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
   return (
     <div>
       <Head>
@@ -44,7 +29,6 @@ const Home: NextPage = () => {
         <meta name="description" content="HyperSonic Internet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <section className={styles.section}>
         <Navbar />
 
@@ -69,13 +53,12 @@ const Home: NextPage = () => {
         {/* ======= Contact Section =======  */}
         <Contact />
       </section>
-
       {/* ======= Partner Section =======  */}
       <Partners />
-
       {/* ======= Footer Section =======  */}
       <Footer />
 
+      {/* ======= SROLL TO TOP BTN =======  */}
       <button onClick={onBtnClick} ref={btnElement} className={styles.top}>
         ^
       </button>

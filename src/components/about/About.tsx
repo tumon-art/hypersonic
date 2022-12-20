@@ -1,7 +1,7 @@
 import Btn from "../dls/btn/Btn";
 import styles from "./About.module.scss";
 import Image from "next/image";
-import { RefObject, useEffect, useRef, useState } from "react";
+import React, { RefObject, useEffect, useRef, useState } from "react";
 
 const ask = [
   {
@@ -15,6 +15,33 @@ const ask = [
     text: "Perhaps one of the main benefits of investing in our services is that you are sure of top-notch internet connectivity. In particular, we have cutting technologies and protocols that easily make us the perfect solution for your needs. We provide a speed home internet with excellent customer support and reliable installation that experiences no downtime. Our internet services are not capped or controlled in any way. We provide unlimited high-speed internet service for your needs.",
   },
 ];
+
+const useOnScreen = (
+  ref: RefObject<HTMLDivElement>,
+  callback: (entries: IntersectionObserverEntry) => void
+) => {
+  const [entry, setEntry] = useState<IntersectionObserverEntry>();
+
+  console.log("useOnScreen");
+  React.useEffect(() => {
+    console.log("useEffect");
+    const observer = new IntersectionObserver(([entry]) => {
+      callback(entry);
+      setEntry(entry);
+    });
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      console.log("unobserve");
+      observer.unobserve(ref.current!);
+    };
+  }, []);
+
+  return entry;
+};
+
 const About = ({
   btnElement,
 }: {
@@ -24,26 +51,40 @@ const About = ({
 
   const aboutRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // InterSection Ovserver
-    const ovserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log(entry.boundingClientRect.top, "entry");
-        if (entry.boundingClientRect.top < 600) {
-          console.log("show");
-          btnElement.current!.style.display = "block";
-        }
-        if (entry.boundingClientRect.top > 600) {
-          console.log("hide");
-          btnElement.current!.style.display = "none";
-        }
+  const onScreen = useOnScreen(btnElement, (entry) => {
+    console.log(entry);
+    console.log(entry.boundingClientRect.top, "entry");
+    if (entry.boundingClientRect.top < 600) {
+      console.log("show");
+      btnElement.current!.style.display = "block";
+    }
+    if (entry.boundingClientRect.top > 600) {
+      console.log("hide");
+      btnElement.current!.style.display = "none";
+    }
 
-        // if (entry.isIntersecting) ovserver.unobserve(entry.target);
-      });
-    });
+    // if (entry.isIntersecting) ovserver.unobserve(entry.target);
+  });
+  console.log(onScreen);
+  // useEffect(() => {
+  //   // InterSection Ovserver
+  //   const ovserver = new IntersectionObserver(([entry]) => {
+  //     console.log(entry);
+  //     console.log(entry.boundingClientRect.top, "entry");
+  //     if (entry.boundingClientRect.top < 600) {
+  //       console.log("show");
+  //       btnElement.current!.style.display = "block";
+  //     }
+  //     if (entry.boundingClientRect.top > 600) {
+  //       console.log("hide");
+  //       btnElement.current!.style.display = "none";
+  //     }
 
-    ovserver.observe(aboutRef.current as Element);
-  }, []);
+  //     // if (entry.isIntersecting) ovserver.unobserve(entry.target);
+  //   });
+
+  //   ovserver.observe(aboutRef.current as Element);
+  // }, []);
 
   return (
     <section ref={aboutRef} id="about" className={styles.main}>
