@@ -17,32 +17,6 @@ const ask = [
   },
 ];
 
-const useOnScreen = (
-  ref: RefObject<HTMLDivElement>,
-  callback: (entries: IntersectionObserverEntry) => void
-) => {
-  const [entry, setEntry] = useState<IntersectionObserverEntry>();
-
-  console.log("useOnScreen");
-  React.useEffect(() => {
-    console.log("useEffect");
-    const observer = new IntersectionObserver(([entry]) => {
-      callback(entry);
-      setEntry(entry);
-    });
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      console.log("unobserve");
-      observer.unobserve(ref.current!);
-    };
-  }, []);
-
-  return entry;
-};
-
 const About = ({
   btnElement,
 }: {
@@ -61,52 +35,12 @@ const About = ({
     if (entry.boundingClientRect.top > 600) {
       btnElement.current!.style.display = "none";
     }
-
-    // if (entry.isIntersecting) ovserver.unobserve(entry.target);
   });
   console.log(onScreen);
-  // useEffect(() => {
-  //   // InterSection Ovserver
-  //   const ovserver = new IntersectionObserver(([entry]) => {
-  //     console.log(entry);
-  //     console.log(entry.boundingClientRect.top, "entry");
-  //     if (entry.boundingClientRect.top < 600) {
-  //       console.log("show");
-  //       btnElement.current!.style.display = "block";
-  //     }
-  //     if (entry.boundingClientRect.top > 600) {
-  //       console.log("hide");
-  //       btnElement.current!.style.display = "none";
-  //     }
-
-  //     // if (entry.isIntersecting) ovserver.unobserve(entry.target);
-  //   });
-
-  //   ovserver.observe(aboutRef.current as Element);
-  // }, []);
 
   return (
     <section ref={aboutRef} id="about" className={styles.main}>
       <Btn nav> About </Btn>
-      {/* ===== ASK QUESTIONS SECTION  */}
-      {/* <div className={styles.ask}> */}
-      {/*   {ask.map((e) => { */}
-      {/*     return ( */}
-      {/*       <div key={e.id}> */}
-      {/*         <div className={styles.titleHold}> */}
-      {/*           <h4 onClick={() => setShow(e.id)}> {e.title} </h4> */}
-      {/*           <span */}
-      {/*             onClick={() => (show == e.id ? setShow("") : setShow(e.id))} */}
-      {/*           > */}
-      {/*             {show == e.id ? "-" : "+"} */}
-      {/*           </span> */}
-      {/*         </div> */}
-
-      {/*         {show == e.id && <p> {e.text}</p>} */}
-      {/*       </div> */}
-      {/*     ); */}
-      {/*   })} */}
-      {/* </div> */}
       <div className={styles.flexCont}>
         <div className={styles.textHold}>
           <h1>
