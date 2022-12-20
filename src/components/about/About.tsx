@@ -2,6 +2,7 @@ import Btn from "../dls/btn/Btn";
 import styles from "./About.module.scss";
 import Image from "next/image";
 import React, { RefObject, useEffect, useRef, useState } from "react";
+import { UseInterSect } from "../UseInterSect";
 
 const ask = [
   {
@@ -51,15 +52,13 @@ const About = ({
 
   const aboutRef = useRef<HTMLDivElement>(null);
 
-  const onScreen = useOnScreen(btnElement, (entry) => {
+  const onScreen = UseInterSect(aboutRef, (entry) => {
     console.log(entry);
     console.log(entry.boundingClientRect.top, "entry");
     if (entry.boundingClientRect.top < 600) {
-      console.log("show");
       btnElement.current!.style.display = "block";
     }
     if (entry.boundingClientRect.top > 600) {
-      console.log("hide");
       btnElement.current!.style.display = "none";
     }
 
