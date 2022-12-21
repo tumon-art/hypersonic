@@ -1,19 +1,11 @@
 import { useRef } from "react";
 import pricingData from "../../store/pricingData";
 import Btn from "../dls/btn/Btn";
-import { useInterSect } from "../useInterSect";
 import styles from "./Pricing.module.scss";
 
 const Pricing = () => {
   const pricingRef = useRef<HTMLDivElement>(null);
 
-  useInterSect(
-    pricingRef,
-    (entry) => {
-      entry.target.classList.toggle(styles["active"], entry.isIntersecting);
-    },
-    true
-  );
   return (
     <section id="pricing" className={styles.main}>
       <Btn nav> Pricing </Btn>

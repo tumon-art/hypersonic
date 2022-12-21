@@ -37,10 +37,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ======= Featured Services Section ======= */}
-        <section className={styles.featuredSect}>
-          <FeaturedCard />
-        </section>
-
+        <FeaturedCard />
         {/* ======= About Section =======  */}
         <About btnElement={btnElement} />
 
