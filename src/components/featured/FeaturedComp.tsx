@@ -10,7 +10,6 @@ const FeaturedCard = () => {
     // InterSection Ovserver
     const ovserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry, "entry");
         entry.target.classList.toggle(styles["active"], entry.isIntersecting);
         if (entry.isIntersecting) ovserver.unobserve(entry.target);
       });

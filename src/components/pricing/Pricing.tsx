@@ -10,7 +10,6 @@ const Pricing = () => {
   useInterSect(
     pricingRef,
     (entry) => {
-      console.log(entry);
       entry.target.classList.toggle(styles["active"], entry.isIntersecting);
     },
     true
