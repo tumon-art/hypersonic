@@ -104,7 +104,7 @@ const Contact = () => {
         </div>
       </div>
       <div className={styles.sec}>
-        {/* <Map /> */}
+        <Map />
         <div className={styles.formHold}>
           <form className={styles.form}>
             <div>
