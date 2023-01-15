@@ -5,9 +5,7 @@ export const useInterSect = <T extends Element>(
   callback: (entry: IntersectionObserverEntry) => void,
   once?: boolean
 ) => {
-  console.log("useOnScreen");
   React.useEffect(() => {
-    console.log("useEffect");
     const observer = new IntersectionObserver(([entry]) => {
       callback(entry);
       if (once == true) {
@@ -20,7 +18,6 @@ export const useInterSect = <T extends Element>(
     }
 
     return () => {
-      console.log("unobserve");
       observer.disconnect();
     };
   }, [ref, callback, once]);
