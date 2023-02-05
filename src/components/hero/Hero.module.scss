@@ -16,6 +16,7 @@
 
 .titleDiv {
   color: var(--coral-light);
+  margin: 2em 0 0 0;
   h1 {
     font-family: var(--font);
     font-size: 2rem;
@@ -49,7 +50,7 @@
 }
 .imgHold {
   position: relative;
-  margin: 2 5em 0 0;
+  margin: 2em 0em 0 0;
   order: -1;
   height: 240px;
   width: 240px;

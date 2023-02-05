@@ -9,6 +9,9 @@ const Sidebar = () => {
       onClick={setSidebarFalse}
       className={`${sidebar ? styles.container : styles.container__hide}`}
     >
+      {/* TO CLOSE TOP BAR  */}
+      <div className={styles.close}></div>
+
       <div className={`${sidebar ? styles.main : styles.main__hide}`}>
         <div className={styles.nav}>
           <Btn side href="#about">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import useStore from "../../store/mainStore";
+// import useStore from "../../store/mainStore";
 import Btn from "../dls/btn/Btn";
 import styles from "./Navbar.module.scss";
 import Sidebar from "../dls/sidebar/Sidebar";
@@ -11,8 +11,8 @@ const Img = () => (
 );
 
 const Navbar = () => {
-  const setSidebar = useStore((state) => state.setSidebar);
-  const sidebar = useStore((state) => state.sidebar);
+  // const setSidebar = useStore((state) => state.setSidebar);
+  // const sidebar = useStore((state) => state.sidebar);
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const mainName = useRef<HTMLSpanElement>(null);
