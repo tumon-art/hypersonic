@@ -124,6 +124,7 @@
   display: grid;
   gap: 1em 0;
   grid-template-columns: 1fr;
+  margin: 2em 0;
 
   @include screen.devices(md) {
     grid-template-columns: 1fr 1fr;

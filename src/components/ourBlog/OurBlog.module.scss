@@ -36,22 +36,11 @@
 
 .card {
   width: 350px;
-  border-radius: 5%;
   border: 8px solid var(--dim);
   transition: var(--transition);
   position: relative;
+  box-shadow:1px 1px 122px 6px rgb(106, 1, 1);
 
-  &::before {
-    content: "";
-    position: absolute;
-    height: 120%;
-    width: 120%;
-    z-index: -1;
-    background-color: rgb(74, 9, 9);
-    left: -30px;
-    top: -30px;
-    filter: blur(140px);
-  }
 }
 
 .textHold {
@@ -73,7 +62,6 @@
 .imgHold {
   position: relative;
   height: 220px;
-  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
