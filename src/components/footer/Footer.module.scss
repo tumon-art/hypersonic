@@ -20,6 +20,16 @@
   }
 
   .nameAndDesc {
+    display: grid;
+    justify-content: center;
+    padding: 0 0 1em 0;
+    border-bottom: 2px dashed var(--dim);
+
+    @include screen.devices(md) {
+      justify-content: left;
+      border: none;
+      padding: 0;
+    }
     p {
       word-wrap: break-word;
       width: 300px;
@@ -42,6 +52,30 @@
         }
       }
     }
+  }
+}
+
+.h4 {
+  text-align: center;
+
+  @include screen.devices(md) {
+    text-align: left;
+  }
+}
+
+.iconHold {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+  justify-content: center;
+
+  @include screen.devices(md) {
+    justify-content: left;
+  }
+
+  &__svg {
+    height: 1.5em;
+    width: 1.5em;
   }
 }
 
@@ -87,6 +121,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include screen.devices(sm) {
+    padding: 0 5em;
+  }
+
+  @include screen.devices(md) {
+    padding: 0 0;
+  }
 
   @include screen.devices(lg) {
     width: 33%;
