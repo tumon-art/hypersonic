@@ -16,7 +16,7 @@ const FeaturedCard = () => {
     });
 
     cardsRef.current?.childNodes.forEach((node) => {
-      ovserver.observe(node as Element);
+      ovserver.observe(node as HTMLDivElement);
     });
     return () => {
       ovserver.disconnect();
