@@ -66,7 +66,7 @@
     z-index: -1;
     height: 300px;
     width: 300px;
-    filter: blur(322px);
+    filter: blur(122px);
     background-color: var(--shadow);
   }
 
@@ -84,7 +84,17 @@
     margin: 0 5em 0 0;
   }
 }
-.img {
+ .img {
   object-fit: contain;
   position: relative;
-}
+ }
+
+
+    @-moz-document url-prefix() {
+      .imgHold {
+        &::before {
+          filter: blur(322px);
+        }
+      }
+
+    }
