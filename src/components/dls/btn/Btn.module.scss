@@ -42,26 +42,25 @@
 }
 
 .btnHero {
-  margin: 2rem 0rem;
-  border: 2px var(--dim) solid;
-  color: var(--coral);
-  cursor: pointer;
-  font-family: var(--font);
-  font-size: 0.8rem;
-  font-weight: bold;
-  // padding: 0.2rem 1.6rem;
-  height: 40px;
-  width: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem 3rem;
-  border-radius: 10rem;
-  overflow: hidden;
-  transition-delay: 0.2s;
-  position: relative;
-  isolation: isolate;
-  box-shadow: 0px 0px 60px 0px #462418;
+    margin: 2rem 0;
+    border: 2px solid var(--shadow);
+    color: var(--coral);
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: .8rem;
+    font-weight: 700;
+    height: 40px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 3rem;
+    border-radius: 10rem;
+    overflow: hidden;
+    transition-delay: .2s;
+    position: relative;
+    isolation: isolate;
+    box-shadow: 0 0 110px 0 var(--shadow);
 
   @include screen.devices(lg) {
     margin: 5rem 0;
