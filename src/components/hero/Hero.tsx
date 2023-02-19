@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Btn from "../dls/btn/Btn";
 import styles from "./Hero.module.scss";
+
 const Hero = () => {
   return (
     <div className={styles.main}>
