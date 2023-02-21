@@ -1,10 +1,26 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import pricingData from "../../store/pricingData";
 import Btn from "../dls/btn/Btn";
+import { useInterSect } from "../useInterSect";
 import styles from "./Pricing.module.scss";
 
 const Pricing = () => {
   const pricingRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // InterSection Ovserver
+    const ovserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle(styles["active"], entry.isIntersecting);
+        if (entry.isIntersecting) ovserver.unobserve(entry.target);
+      });
+    });
+
+    ovserver.observe(pricingRef.current as any);
+    return () => {
+      ovserver.disconnect();
+    };
+  }, []);
 
   return (
     <section id="pricing" className={styles.main}>

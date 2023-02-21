@@ -8,6 +8,7 @@ export const useInterSect = <T extends Element>(
   React.useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       callback(entry);
+      console.log('hello')
       if (once == true) {
         if (entry.isIntersecting) observer.unobserve(entry.target);
       }

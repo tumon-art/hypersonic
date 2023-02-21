@@ -55,6 +55,12 @@
 
 .cardHold {
   font-family: var(--font);
+  translate: 120px 0;
+  transition: 2s;
+
+  &.active {
+    translate: 0 0;
+  }
 
   @include screen.devices(md) {
     display: flex;

@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Navbar from "../components/header/Navbar";
@@ -12,7 +11,7 @@ import { useRef } from "react";
 import OurBlog from "../components/ourBlog/OurBlog";
 import Contact from "../components/contact/Contact";
 
-const Home: NextPage = () => {
+const Home = () => {
   const btnElement = useRef<HTMLButtonElement>(null);
 
   const onBtnClick = () => {

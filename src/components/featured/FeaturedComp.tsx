@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Card } from "../../store/@types";
 import featuredData from "../../store/featuredData";
 import styles from "./FeaturedCard.module.scss";
