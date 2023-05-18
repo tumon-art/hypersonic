@@ -185,7 +185,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.copyRight}>
-        Copyright 2022 Hypersonic Services Ltd. | All Rights Reserved | Powered
+        Copyright 2023 Hypersonic Services Ltd. | All Rights Reserved | Powered
         by 2M0N
       </div>
     </footer>
